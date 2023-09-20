@@ -4,13 +4,10 @@ import "./App.css";
 import Modal from "./Components/Modal";
 import Meals from "./Components/Meals";
 
-
 function App() {
   return (
     <div className="App">
-
       <Meals />
-      <Modal />
     </div>
   );
 }

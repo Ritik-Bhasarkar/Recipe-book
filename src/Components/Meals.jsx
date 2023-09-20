@@ -1,7 +1,8 @@
 import { AppContext, useGlobalContext } from '../context'
 
+ 
 const Meals = () => {
-    const context = useGlobalContext()
+    const context = useGlobalContext();
     console.log(context);
 
   return (
