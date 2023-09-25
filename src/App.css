@@ -169,3 +169,122 @@ ul {
 }
 
 /* End Of Global Styles */
+
+
+
+
+
+/*Search*/
+
+.search-container{
+  height: 5rem;
+  background:var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-container form{
+    width: var(--view-width);
+    max-width: var(--max-width);
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.search-container .form-input{
+  max-width: 200px;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--grey-200);
+  border-radius: var(--borderRadius);
+  background: var(--backgroundColor);
+}
+::placeholder{
+  font-family: inherit;
+  color: var(--grey-400);
+}
+.search-container .btn{
+  font-size: 0.75rem;
+}
+
+
+
+/*Favourites*/
+
+/* Meals*/
+
+/*loading-->*/
+
+.load-section{
+  padding: 5rem 0;
+  margin: 0 auto;
+  width: var(--view-width);
+  max-width: var(--max-width);
+}
+
+
+.meals-card{
+  display: grid;
+  padding: 5rem 0;
+  width: var(--view-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap:2rem;
+}
+
+@media screen and (min-width:776px){
+  .meals-card{
+  grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width:992px){
+  .meals-card{
+  grid-template-columns: repeat(3,1fr)
+  }
+}
+
+.single-meal{
+  background:var(--white);
+  color: var(--textColor);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+}
+
+.single-meal:hover{
+  box-shadow: var(--shadow-4);
+}
+
+.single-meal img{
+  height: 15rem;
+  border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius);
+  cursor: pointer;
+}
+
+.single-meal h5{
+  margin: 0;
+  padding: 0;
+}
+
+.single-meal .meal-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.5rem;
+  flex: wrap;
+}
+
+.like-btn{
+  background-color: transparent;
+  border: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.like-btn:hover{
+  color: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+
+/*Modal*/
