@@ -288,3 +288,52 @@ ul {
 
 
 /*Modal*/
+
+
+.modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.82);
+  display:grid;
+  place-items: center; /*use for align and justify*/
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.modal-container{
+  width: 80vh;
+  max-width: 800px;
+  height: 80vh;
+  background:var(--white);
+  overflow: scroll;
+  border-radius: var(--borderRadius);
+
+}
+
+.modal-container img{
+  height: 40%;  
+  border-top-right-radius: var(--borderRadius);
+  border-top-left-radius: var(--borderRadius);
+}
+.modal-container footer{
+  padding: 1.3rem;
+  color: var(--grey-600);
+}
+
+.modal-container .btn{
+  background: var(--red-dark);
+}
+
+.modal-container a{
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+transition: var(--transition);
+}
+
+.modal-container a:hover{
+  color: var(--black);
+}
