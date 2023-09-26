@@ -1,10 +1,14 @@
 import React from "react";
+import { useGlobalContext } from "../context";
 
 const Modal = () => {
   return (
-    <div>
-      <p></p>
-    </div>
+    <aside className="modal-overlay">
+      <div className="modal-container">
+      
+      </div>
+
+    </aside>
   );
 };
 

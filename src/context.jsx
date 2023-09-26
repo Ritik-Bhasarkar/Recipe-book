@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 
 
@@ -15,14 +15,11 @@ const AppProvider = ({ children }) => {
 
   const [searchTerm, setSearchTerm]=useState('');
 
+  const [showModal,setShowModal] =useState(true);
 
-
- const fetchMeals = async(url) => {
-
-  
-
-
-   setLoading(true);
+ 
+  const fetchMeals = async(url) => {
+  setLoading(true);
       try{
         const {data} = await axios(url);  ///const response-----> response is a inbuilt property to fetch the api response
         
@@ -37,12 +34,23 @@ const AppProvider = ({ children }) => {
       }
       setLoading(false);
     }
-  
-    useEffect(()=>{
-    fetchMeals(`${allMealsUrl}${searchTerm}`);
+
+
+const fetchRandomMeal =()=>{
+  fetchMeals(randomMealUrl);
+}
+
+
+useEffect(()=>{
+  fetchMeals(allMealsUrl)
+},[])
+
+  useEffect(()=>{
+  if(!searchTerm) return
+  fetchMeals(`${allMealsUrl}${searchTerm}`);
   },[searchTerm])
 
-  return <AppContext.Provider value={{loading,meals,setSearchTerm}}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{loading,meals,setSearchTerm,fetchRandomMeal,showModal}}>{children}</AppContext.Provider>;
 };
 
 export const useGlobalContext = ()=>{

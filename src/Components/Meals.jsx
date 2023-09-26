@@ -1,4 +1,4 @@
-import { AppContext, useGlobalContext } from '../context'
+import { useGlobalContext } from '../context'
 import { AiOutlineHeart} from "react-icons/ai";
  
 const Meals = () => {
