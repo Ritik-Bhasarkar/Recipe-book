@@ -34,7 +34,7 @@ const Search = () => {
         <input onChange = {handleChange } className='form-input'
         value={text} type='text' placeholder='type favorite meal'/>
         <button  className='btn' type='submit' >search</button>
-        <button onClick ={handleRandomMeal} className='btn btn-hipster' type='button'>suprise me</button>
+        <button onClick ={handleRandomMeal} className='btn btn-hipster' type='button'>suprise me !</button>
       </form>
     </header>
     )

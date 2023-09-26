@@ -2,7 +2,7 @@ import { useGlobalContext } from '../context'
 import { AiOutlineHeart} from "react-icons/ai";
  
 const Meals = () => {
-    const {meals , loading, selectMeal, selectedMeal} = useGlobalContext();
+    const {meals , loading, selectMeal, addToFavorites} = useGlobalContext();
      
 
     if(loading){
@@ -29,7 +29,7 @@ const Meals = () => {
             <img src={image} className='img' alt='meal' onClick={()=>selectMeal(idMeal)} ></img>
             <footer className='meal-footer'>
               <h5>{title}</h5>
-              <button className='like-btn'><AiOutlineHeart/></button>
+              <button onClick={()=>addToFavorites(idMeal)} className='like-btn'><AiOutlineHeart/></button>
             </footer>
             </article>
             )
